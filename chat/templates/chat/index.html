@@ -31,10 +31,11 @@
   </div>
   <main class="mdl-layout__content">
     <div class="page-content">
-      <form action="#">
+      <form action="/chat/" method="post">
+        {% csrf_token %}
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" id="sample3" />
-          <label class="mdl-textfield__label" for="sample3">Text...</label>
+          <input class="mdl-textfield__input" name="textmessage" type="text" id="textmessage" />
+          <label class="mdl-textfield__label" for="textmessage">Text...</label>
         </div>
         
         <button class="mdl-button mdl-js-button mdl-button--raised">Send</button>
